@@ -3,7 +3,7 @@ Contains MATLAB code to  ``Modality of odor perception is transmitted to cortica
 Sub-directories:
 
 
-#~/data_analysis/
+**~/data_analysis/**
 
 plot_Hists_Decod.m — loads prev saved decode accuracies (DecodAcc.mat & DecAcc_mnGreater.mat), shows histograms of avg MC , and conditioned on muO<muR & vice-versa
 plot_Selectivity.m — shows proportion of retro/orth select cells based on trial-avg firing (horizontal bar graphs), calls Rat[j]*.mat
@@ -13,7 +13,7 @@ get_popDecod_PCA.m — implements PCA+LDA, creates PopDecod_pcaLDA.mat (if save_
 get_popDecod_SVM.m  — implements SVM, crease PopDecod_Bayes_SVM.mat (if save_flag=1) used to plot histogram via plot_Popul_SVM.m 
 
 
-#~/firing_rate/model/
+**~/firing_rate/model/**
 
 FRmodel_plots.m — driver to run model and show plots, calls WCnet_EIcells.m
 WCnet_EIcells.m — implementing firing rate model E,I pair with Runge-Kutta (4th order). 
