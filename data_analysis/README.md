@@ -14,6 +14,7 @@ make_DecodAccMat.m — quick script to create DecodAcc.mat, combining all decodi
 calc_DistDecode.m — plots decoding acc as fcn of distance |muO-muR| and displays correlation (Pearson’s & Spearman’s Rank)
 
 plot_Hists_Decod.m — loads prev saved decode accuracies (DecodAcc.mat & DecAcc_mnGreater.mat), shows histograms of avg MC , and conditioned on muO<muR & vice-versa.  Has p-values for significance tests too!
+
 plot_Selectivity.m — shows proportion of retro/orth select cells based on trial-avg firing (horizontal bar graphs), calls Rat[j]*.mat (Fig 1Aiii)
 
 get_plot_PSTH.m — plots various pop PSTH, in Fig 1Aii and Fig 2B, as well as p-values (time series) for when drug diff significant
