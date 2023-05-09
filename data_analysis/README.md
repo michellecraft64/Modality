@@ -30,7 +30,9 @@ get_popDecod_PCA.m — implements PCA+LDA, creates PopDecod_pcaLDA.mat (if save_
 get_popDecod_SVM.m  — implements SVM, crease PopDecod_Bayes_SVM.mat (if save_flag=1) used to plot histogram via plot_Popul_SVM.m 
 
 Fig A2:
-avgDecod_varyWind.m — gets and plots avg +/- std of decoding accuracy as time windows vary
+avgDecod_varyWind.m — gets and plots avg +/- std of decoding accuracy as time windows vary.
+
+Fig A2:
 get_find_Optim_Tev_raw.m — Code for Figure A2 — p-values with different windows, using mat files: IndCellRAW_OptWin_EB_0sSpon.mat 
 and IndCellRAW3shift_OptWin_EB_0sSpon.mat
 
