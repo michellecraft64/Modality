@@ -19,7 +19,7 @@ plot_Hists_Decod_raw.m — loads prev saved decode accuracies (DecodAcc.mat & De
 plot_Selectivity.m — shows proportion of retro/orth select cells based on trial-avg firing (horizontal bar graphs), calls Rat[j]*.mat (Fig 1Aiii)
 
 get_plot_PSTH.m — plots various pop PSTH, in Fig 1Aii, Fig 2, Fig 3B, as well as p-values (time series) for when drug diff significant. 
-Contains code to plot the heatmap for trial-avg firing rate and std dev across trials (Fig 2), tables for correlation between trial-var and firing rate (Fig A3, Table A1). 
+Contains code to plot the heatmap for trial-avg firing rate and std dev across trials (Fig 2), tables for correlation between trial-var and firing rate (Fig A3, Table A2). 
 
 get_plot_PSTH_extndTime.m — extended time so returns to baseline (Fig A1)
 
