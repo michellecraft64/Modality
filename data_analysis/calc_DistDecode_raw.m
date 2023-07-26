@@ -31,7 +31,7 @@ T=table(drgPrep,pearsonsCorr,RankCorr)
 %% do again with mean/std
 max_allX=500; %cap x-vals to mean
 %no drug
-x_ND=mnSpread_ND./stSpread_ND;
+x_ND=stSpread_ND;
 sum(x_ND>max_allX)+sum(isnan(x_ND))
 x_ND(isnan(x_ND))=mnSpread_ND(isnan(x_ND));
 x_ND(x_ND>max_allX)=mnSpread_ND(x_ND>max_allX);
@@ -41,7 +41,7 @@ axis([ 1e-2-eps max_allX 0.5 1])
 box off
 
 %Bic
-x_Bic=mnSpread_Bic./stSpread_Bic;
+x_Bic=stSpread_Bic;
 sum(x_Bic>max_allX)+sum(isnan(x_Bic))
 x_Bic(isnan(x_Bic))=mnSpread_Bic(isnan(x_Bic));
 x_Bic(x_Bic>max_allX)=mnSpread_Bic(x_Bic>max_allX);
@@ -51,7 +51,7 @@ axis([ 1e-2-eps max_allX 0.5 1])
 box off
 
 %Mus
-x_Mus=mnSpread_Mus./stSpread_Mus;
+x_Mus=stSpread_Mus;
 sum(x_Mus>max_allX)+sum(isnan(x_Mus)) %how many are 'bad'
 x_Mus(isnan(x_Mus))=mnSpread_Mus(isnan(x_Mus));
 x_Mus(x_Mus>max_allX)=mnSpread_Mus(x_Mus>max_allX);
