@@ -242,7 +242,7 @@ figure('Renderer', 'painters', 'Position', [500 1500 650 300])
 pcolor(tme,1:nmC_nd,fr_ND_or(:,id1)')
 shading flat
 colormap(newMap)
-clim([mnFR mxFR])
+caxis([mnFR mxFR])
 %set(gca,'ColorScale','log')
 colorbar
 colormap parula
@@ -252,12 +252,11 @@ xlabel('Time (s)')
 ylabel('Cell Idnex (sorted)')
 set(gca,'XLim',[-1 2])
 
-[tmp,id2]=sort(mean(fr_ND_ret));
 figure('Renderer', 'painters', 'Position', [500 1500 650 300])
-pcolor(tme,1:nmC_nd,fr_ND_ret(:,id2)')
+pcolor(tme,1:nmC_nd,fr_ND_ret(:,id1)')
 shading flat
 colormap(newMap)
-clim([mnFR mxFR])
+caxis([mnFR mxFR])
 colorbar
 colormap parula
 title('Mean firing rate, Ret-ND')
@@ -266,12 +265,12 @@ xlabel('Time (s)')
 ylabel('Cell Idnex (sorted)')
 set(gca,'XLim',[-1 2])
 
-[tmp,id3]=sort(mean(fr_Bic_or));
+[tmp,id2]=sort(mean(fr_Bic_or));
 figure('Renderer', 'painters', 'Position', [500 1500 650 300])
-pcolor(tme,1:nmC_bic,fr_Bic_or(:,id3)')
+pcolor(tme,1:nmC_bic,fr_Bic_or(:,id2)')
 shading flat
 colormap(newMap)
-clim([mnFR mxFR])
+caxis([mnFR mxFR])
 colorbar
 colormap parula
 title('Mean firing rate, Ort-Bic')
@@ -280,12 +279,11 @@ xlabel('Time (s)')
 ylabel('Cell Idnex (sorted)')
 set(gca,'XLim',[-1 2])
 
-[tmp,id4]=sort(mean(fr_Bic_ret));
 figure('Renderer', 'painters', 'Position', [500 1500 650 300])
-pcolor(tme,1:nmC_bic,fr_Bic_ret(:,id4)')
+pcolor(tme,1:nmC_bic,fr_Bic_ret(:,id2)')
 shading flat
 colormap(newMap)
-clim([mnFR mxFR])
+caxis([mnFR mxFR])
 colorbar
 colormap parula
 title('Mean firing rate, Ret-Bic')
@@ -294,12 +292,12 @@ xlabel('Time (s)')
 ylabel('Cell Idnex (sorted)')
 set(gca,'XLim',[-1 2])
 
-[tmp,id5]=sort(mean(fr_Mus_or));
+[tmp,id3]=sort(mean(fr_Mus_or));
 figure('Renderer', 'painters', 'Position', [500 1500 650 300])
-pcolor(tme,1:nmC_mus,fr_Mus_or(:,id5)')
+pcolor(tme,1:nmC_mus,fr_Mus_or(:,id3)')
 shading flat
 colormap(newMap)
-clim([mnFR mxFR])
+caxis([mnFR mxFR])
 colorbar
 colormap parula
 title('Mean firing rate, Ort-Mus')
@@ -308,12 +306,11 @@ xlabel('Time (s)')
 ylabel('Cell Idnex (sorted)')
 set(gca,'XLim',[-1 2])
 
-[tmp,id6]=sort(mean(fr_Mus_ret));
 figure('Renderer', 'painters', 'Position', [500 1500 650 300])
-pcolor(tme,1:nmC_mus,fr_Mus_ret(:,id6)')
+pcolor(tme,1:nmC_mus,fr_Mus_ret(:,id3)')
 shading flat
 colormap(newMap)
-clim([mnFR mxFR])
+caxis([mnFR mxFR])
 colorbar
 colormap parula
 title('Mean firing rate, Ret-Mus')
@@ -337,7 +334,7 @@ figure('Renderer', 'painters', 'Position', [500 1500 650 300])
 pcolor(tme,1:nmC_nd,sr_ND_or(:,id1)')
 shading flat
 colormap(newMapS)
-clim([mnSR mxSR])
+caxis([mnSR mxSR])
 colorbar
 colormap parula
 title('STD firing rate, Ort-ND')
@@ -348,10 +345,10 @@ set(gca,'XLim',[-1 2])
 
 %[tmp,id]=sort(mean(sr_ND_ret));
 figure('Renderer', 'painters', 'Position', [500 1500 650 300])
-pcolor(tme,1:nmC_nd,sr_ND_ret(:,id2)')
+pcolor(tme,1:nmC_nd,sr_ND_ret(:,id1)')
 shading flat
 colormap(newMapS)
-clim([mnSR mxSR])
+caxis([mnSR mxSR])
 colorbar
 colormap parula
 title('STD firing rate, Ret-ND')
@@ -362,10 +359,10 @@ set(gca,'XLim',[-1 2])
 
 %[tmp,id]=sort(mean(sr_Bic_or));
 figure('Renderer', 'painters', 'Position', [500 1500 650 300])
-pcolor(tme,1:nmC_bic,sr_Bic_or(:,id3)')
+pcolor(tme,1:nmC_bic,sr_Bic_or(:,id2)')
 shading flat
 colormap(newMapS)
-clim([mnSR mxSR])
+caxis([mnSR mxSR])
 colorbar
 colormap parula
 title('STD firing rate, Ort-Bic')
@@ -376,10 +373,10 @@ set(gca,'XLim',[-1 2])
 
 %[tmp,id]=sort(mean(sr_Bic_ret));
 figure('Renderer', 'painters', 'Position', [500 1500 650 300])
-pcolor(tme,1:nmC_bic,sr_Bic_ret(:,id4)')
+pcolor(tme,1:nmC_bic,sr_Bic_ret(:,id2)')
 shading flat
 colormap(newMapS)
-clim([mnSR mxSR])
+caxis([mnSR mxSR])
 colorbar
 colormap parula
 title('STD firing rate, Ret-Bic')
@@ -390,10 +387,10 @@ set(gca,'XLim',[-1 2])
 
 %[tmp,id]=sort(mean(sr_Mus_or));
 figure('Renderer', 'painters', 'Position', [500 1500 650 300])
-pcolor(tme,1:nmC_mus,sr_Mus_or(:,id5)')
+pcolor(tme,1:nmC_mus,sr_Mus_or(:,id3)')
 shading flat
 colormap(newMapS)
-clim([mnSR mxSR])
+caxis([mnSR mxSR])
 colorbar
 colormap parula
 title('STD firing rate, Ort-Mus')
@@ -404,10 +401,10 @@ set(gca,'XLim',[-1 2])
 
 %[tmp,id]=sort(mean(sr_Mus_ret));
 figure('Renderer', 'painters', 'Position', [500 1500 650 300])
-pcolor(tme,1:nmC_mus,sr_Mus_ret(:,id6)')
+pcolor(tme,1:nmC_mus,sr_Mus_ret(:,id3)')
 shading flat
 colormap(newMapS)
-clim([mnSR mxSR])
+caxis([mnSR mxSR])
 colorbar
 colormap parula
 title('STD firing rate, Ret-Mus')
@@ -459,181 +456,32 @@ pearsonsCorr=[corr(mn_ND_rt,std_ND_rt) ; corr(mn_Bic_rt,std_Bic_rt) ; corr(mn_Mu
 RankCorr=[corr(mn_ND_rt,std_ND_rt,'type','Spearman') ; corr(mn_Bic_rt,std_Bic_rt,'type','Spearman')  ; corr(mn_Mus_rt,std_Mus_rt,'type','Spearman') ];
 T_ret=table(drgPrep,pearsonsCorr,RankCorr)
 
+%repeat but replace std w/ var
+figure
+hold on
+plot(mn_ND_or,std_ND_or.^2,'.','MarkerSize',18,'color',.502*ones(1,3))
+plot(mn_Bic_or,std_Bic_or.^2,'.','MarkerSize',18,'color',[0 200 0]./255)
+plot(mn_Mus_or,std_Mus_or.^2,'.','MarkerSize',18,'color',[140 0 255]./255)
+set(gca,'FontSize',20)
+xlabel('Time-Averaged Evoked Firing Rate (Hz)')
+ylabel('Time-Averaged Var of Evoked Firing Rate (Hz)')
+axis([0 150 0 3600])
+figure
+hold on
+plot(mn_ND_rt,std_ND_rt.^2,'.','MarkerSize',18,'color',.502*ones(1,3))
+plot(mn_Bic_rt,std_Bic_rt.^2,'.','MarkerSize',18,'color',[0 200 0]./255)
+plot(mn_Mus_rt,std_Mus_rt.^2,'.','MarkerSize',18,'color',[140 0 255]./255)
+set(gca,'FontSize',20)
+xlabel('Time-Averaged Evoked Firing Rate (Hz)')
+ylabel('Time-Averaged Var of Evoked Firing Rate (Hz)')
+axis([0 150 0 3600])
 
-%% corresponding graph of indiv PSTH
-if(0) %same info as heatmaps, not useful
-figure('Renderer', 'Painters');
-for j=nmC_nd:-1:1
-    jFT=ceil(size(newMap,1)*j/nmC_nd);
-    semilogy(tme,fr_ND_or(:,id1(j)),'color',newMap(jFT,:))
-    if(j==nmC_nd) 
-        hold on
-    end
-    alpha((nmC_nd-j)/(nmC_nd-1))
-end
-title('Mean firing rate, Ort-ND')
-set(gca,'FontSize',18)
-xlabel('Time (s)')
-ylabel('Firing Rate (Hz)')
-axis([-1 2 0 250])
-figure('Renderer', 'Painters');
-for j=nmC_nd:-1:1
-    jFT=ceil(size(newMap,1)*j/nmC_nd);
-    semilogy(tme,fr_ND_ret(:,id2(j)),'color',newMap(jFT,:))
-    if(j==nmC_nd)
-        hold on
-    end
-    alpha((nmC_nd-j)/(nmC_nd-1))
-end
-title('Mean firing rate, Retr-ND')
-set(gca,'FontSize',18)
-xlabel('Time (s)')
-ylabel('Firing Rate (Hz)')
-axis([-1 2 0 250])
 
-figure('Renderer', 'Painters');
-for j=nmC_bic:-1:1
-    jFT=ceil(size(newMap,1)*j/nmC_bic);
-    semilogy(tme,fr_Bic_or(:,id3(j)),'color',newMap(jFT,:))
-    if(j==nmC_bic)
-        hold on
-    end
-    alpha((nmC_bic-j)/(nmC_bic-1))
-end
-title('Mean firing rate, Ort-Bic')
-set(gca,'FontSize',18)
-xlabel('Time (s)')
-ylabel('Firing Rate (Hz)')
-axis([-1 2 0 250])
-figure('Renderer', 'Painters');
-for j=nmC_bic:-1:1
-    jFT=ceil(size(newMap,1)*j/nmC_bic);
-    semilogy(tme,fr_Bic_ret(:,id4(j)),'color',newMap(jFT,:))
-    if(j==nmC_bic)
-        hold on
-    end
-    alpha((nmC_bic-j)/(nmC_bic-1))
-end
-title('Mean firing rate, Retr-Bic')
-set(gca,'FontSize',18)
-xlabel('Time (s)')
-ylabel('Firing Rate (Hz)')
-axis([-1 2 0 250])
+%showing correlations betwn mean & var
+pearsonsCorr=[corr(mn_ND_or,std_ND_or.^2) ; corr(mn_Bic_or,std_Bic_or.^2) ; corr(mn_Mus_or,std_Mus_or.^2)];
+RankCorr=[corr(mn_ND_or,std_ND_or.^2,'type','Spearman') ; corr(mn_Bic_or,std_Bic_or.^2,'type','Spearman')  ; corr(mn_Mus_or,std_Mus_or.^2,'type','Spearman') ];
+T_ortVar=table(drgPrep,pearsonsCorr,RankCorr)
 
-figure('Renderer', 'Painters');
-for j=nmC_mus:-1:1
-    jFT=ceil(size(newMap,1)*j/nmC_mus);
-    semilogy(tme,fr_Mus_or(:,id5(j)),'color',newMap(jFT,:))
-    if(j==nmC_mus)
-        hold on
-    end
-    alpha((nmC_mus-j)/(nmC_mus-1))
-end
-title('Mean firing rate, Ort-Mus')
-set(gca,'FontSize',18)
-xlabel('Time (s)')
-ylabel('Firing Rate (Hz)')
-axis([-1 2 0 250])
-figure('Renderer', 'Painters');
-for j=nmC_mus:-1:1
-    jFT=ceil(size(newMap,1)*j/nmC_mus);
-    semilogy(tme,fr_Mus_ret(:,id6(j)),'color',newMap(jFT,:))
-    if(j==nmC_mus)
-        hold on
-    end
-    alpha((nmC_mus-j)/(nmC_mus-1))
-end
-title('Mean firing rate, Retr-Mus')
-set(gca,'FontSize',18)
-xlabel('Time (s)')
-ylabel('Firing Rate (Hz)')
-axis([-1 2 0 250])
-
-% --- repeat for STD----
-figure('Renderer', 'Painters');
-for j=nmC_nd:-1:1
-    jFT=ceil(size(newMap,1)*j/nmC_nd);
-    semilogy(tme,sr_ND_or(:,id1(j)),'color',newMapS(jFT,:))
-    if(j==nmC_nd)
-        hold on
-    end
-    alpha((nmC_nd-j)/(nmC_nd-1))
-end
-title('STD firing rate, Ort-ND')
-set(gca,'FontSize',18)
-xlabel('Time (s)')
-ylabel('STD FR (Hz)')
-axis([-1 2 0 105])
-figure('Renderer', 'Painters');
-for j=nmC_nd:-1:1
-    jFT=ceil(size(newMap,1)*j/nmC_nd);
-    semilogy(tme,sr_ND_ret(:,id2(j)),'color',newMapS(jFT,:))
-    if(j==nmC_nd)
-        hold on
-    end
-    alpha((nmC_nd-j)/(nmC_nd-1))
-end
-title('STD firing rate, Retr-ND')
-set(gca,'FontSize',18)
-xlabel('Time (s)')
-ylabel('STD FR (Hz)')
-axis([-1 2 0 105])
-
-figure('Renderer', 'Painters');
-for j=nmC_bic:-1:1
-    jFT=ceil(size(newMap,1)*j/nmC_bic);
-    semilogy(tme,sr_Bic_or(:,id3(j)),'color',newMapS(jFT,:))
-    if(j==nmC_bic)
-        hold on
-    end
-    alpha((nmC_bic-j)/(nmC_bic-1))
-end
-title('STD FR, Ort-Bic')
-set(gca,'FontSize',18)
-xlabel('Time (s)')
-ylabel('STD FR (Hz)')
-axis([-1 2 0 105])
-figure('Renderer', 'Painters')
-for j=nmC_bic:-1:1
-    jFT=ceil(size(newMap,1)*j/nmC_bic);
-    semilogy(tme,sr_Bic_ret(:,id4(j)),'color',newMapS(jFT,:))
-    if(j==nmC_bic)
-        hold on
-    end
-    alpha((nmC_bic-j)/(nmC_bic-1))
-end
-title('STD FR, Retr-Bic')
-set(gca,'FontSize',18)
-xlabel('Time (s)')
-ylabel('STD FR (Hz)')
-axis([-1 2 0 105])
-
-figure('Renderer', 'Painters');
-for j=nmC_mus:-1:1
-    jFT=ceil(size(newMap,1)*j/nmC_mus);
-    semilogy(tme,sr_Mus_or(:,id5(j)),'color',newMapS(jFT,:))
-    if(j==nmC_mus)
-        hold on
-    end
-    alpha((nmC_mus-j)/(nmC_mus-1))
-end
-title('STD FR, Ort-Mus')
-set(gca,'FontSize',18)
-xlabel('Time (s)')
-ylabel('STD FR (Hz)')
-axis([-1 2 0 105])
-figure('Renderer', 'Painters');
-for j=nmC_mus:-1:1
-    jFT=ceil(size(newMap,1)*j/nmC_mus);
-    semilogy(tme,sr_Mus_ret(:,id6(j)),'color',newMapS(jFT,:))
-    if(j==nmC_mus)
-        hold on
-    end
-    alpha((nmC_mus-j)/(nmC_mus-1))
-end
-title('STD FR, Retr-Mus')
-set(gca,'FontSize',18)
-xlabel('Time (s)')
-ylabel('STD FR (Hz)')
-axis([-1 2 0 105])
-end
+pearsonsCorr=[corr(mn_ND_rt,std_ND_rt.^2) ; corr(mn_Bic_rt,std_Bic_rt.^2) ; corr(mn_Mus_rt,std_Mus_rt.^2)];
+RankCorr=[corr(mn_ND_rt,std_ND_rt.^2,'type','Spearman') ; corr(mn_Bic_rt,std_Bic_rt.^2,'type','Spearman')  ; corr(mn_Mus_rt,std_Mus_rt.^2,'type','Spearman') ];
+T_retVar=table(drgPrep,pearsonsCorr,RankCorr)
